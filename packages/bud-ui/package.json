@@ -8,13 +8,13 @@
   ],
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
-  "types": "./types/main.d.ts",
-  "typings": "./types/main.d.ts",
+  "types": "./types/index.d.ts",
+  "typings": "./types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.umd.cjs",
-      "types": "./types/main.d.ts"
+      "types": "./types/index.d.ts"
     }
   },
   "scripts": {
