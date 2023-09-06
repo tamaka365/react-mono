@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "outDir": "./../../types",
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "declaration": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "react-mono",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ui:dev": "pnpm --filter bud-ui run dev",
+    "ui:build": "pnpm --filter bud-ui run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2"
+  }
+}
