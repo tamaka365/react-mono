@@ -1,0 +1,5 @@
+---
+"bud-ui": patch
+---
+
+perf

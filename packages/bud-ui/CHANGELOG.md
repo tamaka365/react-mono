@@ -1,5 +1,11 @@
 # bud-ui
 
+## 0.1.2-alpha.0
+
+### Patch Changes
+
+- perf
+
 ## 1.0.2
 
 ### Patch Changes
