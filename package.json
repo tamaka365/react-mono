@@ -1,11 +1,11 @@
 {
   "name": "react-mono",
-  "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "ui:dev": "pnpm --filter bud-ui run dev",
-    "ui:build": "pnpm --filter bud-ui run build"
+    "build": "pnpm -r run build",
+    "version": "pnpm build && pnpm changeset && pnpm changeset version",
+    "publish": "pnpm version && pnpm publish -r"
   },
   "keywords": [],
   "author": "",

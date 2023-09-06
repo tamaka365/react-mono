@@ -84,7 +84,7 @@ function sr() {
     function Q(e) {
       return e.displayName || "Context";
     }
-    function E(e) {
+    function b(e) {
       if (e == null)
         return null;
       if (typeof e.tag == "number" && c("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."), typeof e == "function")
@@ -117,11 +117,11 @@ function sr() {
             return Ie(e, e.render, "ForwardRef");
           case g:
             var n = e.displayName || null;
-            return n !== null ? n : E(e.type) || "Memo";
+            return n !== null ? n : b(e.type) || "Memo";
           case m: {
             var i = e, u = i._payload, o = i._init;
             try {
-              return E(o(u));
+              return b(o(u));
             } catch {
               return null;
             }
@@ -236,29 +236,29 @@ function sr() {
           }), typeof Reflect == "object" && Reflect.construct) {
             try {
               Reflect.construct(o, []);
-            } catch (b) {
-              n = b;
+            } catch (E) {
+              n = E;
             }
             Reflect.construct(e, [], o);
           } else {
             try {
               o.call();
-            } catch (b) {
-              n = b;
+            } catch (E) {
+              n = E;
             }
             e.call(o.prototype);
           }
         } else {
           try {
             throw Error();
-          } catch (b) {
-            n = b;
+          } catch (E) {
+            n = E;
           }
           e();
         }
-      } catch (b) {
-        if (b && n && typeof b.stack == "string") {
-          for (var a = b.stack.split(`
+      } catch (E) {
+        if (E && n && typeof E.stack == "string") {
+          for (var a = E.stack.split(`
 `), v = n.stack.split(`
 `), s = a.length - 1, f = v.length - 1; s >= 1 && f >= 0 && a[s] !== v[f]; )
             f--;
@@ -393,8 +393,8 @@ function sr() {
     }
     function ze(e, r) {
       if (typeof e.ref == "string" && j.current && r && j.current.stateNode !== r) {
-        var t = E(j.current.type);
-        J[t] || (c('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', E(j.current.type), e.ref), J[t] = !0);
+        var t = b(j.current.type);
+        J[t] || (c('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', b(j.current.type), e.ref), J[t] = !0);
       }
     }
     function Ke(e, r) {
@@ -479,10 +479,10 @@ function sr() {
     function K(e) {
       return typeof e == "object" && e !== null && e.$$typeof === S;
     }
-    function Ee() {
+    function be() {
       {
         if (G.current) {
-          var e = E(G.current.type);
+          var e = b(G.current.type);
           if (e)
             return `
 
@@ -502,10 +502,10 @@ Check your code at ` + r + ":" + t + ".";
         return "";
       }
     }
-    var be = {};
+    var Ee = {};
     function er(e) {
       {
-        var r = Ee();
+        var r = be();
         if (!r) {
           var t = typeof e == "string" ? e : e.displayName || e.name;
           t && (r = `
@@ -521,11 +521,11 @@ Check the top-level render call using <` + t + ">.");
           return;
         e._store.validated = !0;
         var t = er(r);
-        if (be[t])
+        if (Ee[t])
           return;
-        be[t] = !0;
+        Ee[t] = !0;
         var n = "";
-        e && e._owner && e._owner !== G.current && (n = " It was passed a child from " + E(e._owner.type) + "."), C(e), c('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', t, n), C(null);
+        e && e._owner && e._owner !== G.current && (n = " It was passed a child from " + b(e._owner.type) + "."), C(e), c('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', t, n), C(null);
       }
     }
     function _e(e, r) {
@@ -562,11 +562,11 @@ Check the top-level render call using <` + t + ">.");
         else
           return;
         if (t) {
-          var n = E(r);
+          var n = b(r);
           Ve(t, e.props, "prop", n, e);
         } else if (r.PropTypes !== void 0 && !z) {
           z = !0;
-          var i = E(r);
+          var i = b(r);
           c("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", i || "Unknown");
         }
         typeof r.getDefaultProps == "function" && !r.getDefaultProps.isReactClassApproved && c("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
@@ -591,9 +591,9 @@ Check the top-level render call using <` + t + ">.");
           var a = "";
           (e === void 0 || typeof e == "object" && e !== null && Object.keys(e).length === 0) && (a += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
           var v = Qe(i);
-          v ? a += v : a += Ee();
+          v ? a += v : a += be();
           var s;
-          e === null ? s = "null" : q(e) ? s = "array" : e !== void 0 && e.$$typeof === S ? (s = "<" + (E(e.type) || "Unknown") + " />", a = " Did you accidentally export a JSX literal instead of a component?") : s = typeof e, c("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", s, a);
+          e === null ? s = "null" : q(e) ? s = "array" : e !== void 0 && e.$$typeof === S ? (s = "<" + (b(e.type) || "Unknown") + " />", a = " Did you accidentally export a JSX literal instead of a component?") : s = typeof e, c("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", s, a);
         }
         var f = Ze(e, r, t, i, u);
         if (f == null)
@@ -626,7 +626,7 @@ Check the top-level render call using <` + t + ">.");
 }
 process.env.NODE_ENV === "production" ? H.exports = ur() : H.exports = sr();
 var Ce = H.exports;
-const lr = ({ children: h }) => /* @__PURE__ */ Ce.jsx("div", { children: h }), cr = ({ children: h }) => /* @__PURE__ */ Ce.jsx("div", { children: h });
+const lr = ({ children: h }) => /* @__PURE__ */ Ce.jsx("button", { children: h }), cr = ({ children: h }) => /* @__PURE__ */ Ce.jsx("div", { children: h });
 export {
   lr as Button,
   cr as Input
