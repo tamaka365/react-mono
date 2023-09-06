@@ -5,7 +5,7 @@
     "ui:dev": "pnpm --filter bud-ui run dev",
     "build": "pnpm -r run build",
     "version": "pnpm build && pnpm changeset && pnpm changeset version",
-    "publish": "pnpm version && pnpm publish -r"
+    "publish": "pnpm publish -r"
   },
   "keywords": [],
   "author": "",
