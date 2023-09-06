@@ -1,18 +1,19 @@
 {
   "name": "bud-ui",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "type": "module",
   "files": [
     "dist",
     "types"
   ],
   "main": "./dist/bud-ui.umd.cjs",
-  "types": "types/main.d.ts",
+  "types": "./types/main.d.ts",
   "module": "./dist/bud-ui.js",
   "exports": {
     ".": {
       "import": "./dist/bud-ui.js",
-      "require": "./dist/bud-ui.umd.cjs"
+      "require": "./dist/bud-ui.umd.cjs",
+      "types": "./types/main.d.ts"
     }
   },
   "scripts": {

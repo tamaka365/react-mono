@@ -1,5 +1,11 @@
 # bud-ui
 
+## 4.1.2
+
+### Patch Changes
+
+- perf
+
 ## 4.1.1
 
 ### Patch Changes
