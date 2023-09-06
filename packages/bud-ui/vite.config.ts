@@ -9,11 +9,12 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/lib/main.ts'),
       name: 'bud-ui',
-      fileName: 'bud-ui',
+      fileName: 'index',
     },
-    rollupOptions: {
-      external: ['react', 'react-dom'],
-    },
+    // rollupOptions: {
+    //   external: ['react', 'react-dom'],
+    // },
+    copyPublicDir: false,
   },
   plugins: [react()],
 });
