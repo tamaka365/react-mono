@@ -1,14 +1,15 @@
 {
   "name": "bud-ui",
-  "version": "4.1.3",
+  "version": "4.1.4",
   "type": "module",
   "files": [
     "dist",
     "types"
   ],
   "main": "./dist/bud-ui.umd.cjs",
-  "typings": "./types/main.d.ts",
   "module": "./dist/bud-ui.js",
+  "types": "./types/main.d.ts",
+  "typings": "./types/main.d.ts",
   "exports": {
     ".": {
       "import": "./dist/bud-ui.js",
