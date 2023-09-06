@@ -3,9 +3,9 @@
   "description": "",
   "scripts": {
     "ui:dev": "pnpm --filter bud-ui run dev",
-    "build": "pnpm -r run build",
+    "build-all": "pnpm -r run build",
     "changhe": "pnpm changeset",
-    "version": "pnpm build && pnpm changhe && pnpm changeset version",
+    "version": "pnpm build-all && pnpm changhe && pnpm changeset version",
     "publish": "pnpm version && pnpm publish -r"
   },
   "keywords": [],
