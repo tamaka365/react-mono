@@ -18,6 +18,12 @@ export default defineConfig({
           preserveModules: true,
           exports: 'named',
         },
+        {
+          format: 'cjs',
+          entryFileNames: '[name].cjs',
+          preserveModules: true,
+          exports: 'named',
+        },
       ],
       plugins: [
         typescript({
@@ -26,7 +32,7 @@ export default defineConfig({
           declarationDir: 'dist',
           exclude: 'node_modules/**',
           allowSyntheticDefaultImports: true,
-          references: [{ path: 'tsconfig.json' }],
+          // references: [{ path: 'tsconfig.json' }],
         }),
       ],
     },

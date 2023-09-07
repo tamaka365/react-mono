@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("react"),u=({children:e})=>t.createElement("div",null,e),n=u;exports.default=n;
