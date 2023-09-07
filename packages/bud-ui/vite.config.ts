@@ -21,22 +21,12 @@ export default defineConfig({
       ],
       plugins: [
         typescript({
-          compilerOptions: {
-            lib: ['ES2020', 'DOM', 'DOM.Iterable'],
-            module: 'ESNext',
-            moduleResolution: 'bundler',
-            noEmit: false,
-            strict: true,
-            jsx: 'preserve',
-            emitDeclarationOnly: true,
-            importHelpers: true,
-          },
-          target: 'es2020',
           rootDir: 'components',
           declaration: true,
           declarationDir: 'dist',
           exclude: 'node_modules/**',
           allowSyntheticDefaultImports: true,
+          references: [{ path: 'tsconfig.json' }],
         }),
       ],
     },
