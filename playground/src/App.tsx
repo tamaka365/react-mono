@@ -1,7 +1,7 @@
-import { Button } from 'bud-ui';
+import { Menu } from 'bud-ui';
 
 function App() {
-  return <Button>hello world</Button>;
+  return <Menu>hello world</Menu>;
 }
 
 export default App;

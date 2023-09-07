@@ -3,8 +3,8 @@
   "description": "",
   "scripts": {
     "play": "pnpm --filter playground run dev",
-    "build": "pnpm -r run build",
-    "version": "pnpm build && pnpm changeset && pnpm changeset version",
+    "build": "pnpm --filter=!./playground -r run build",
+    "change": "pnpm build && pnpm changeset && pnpm changeset version",
     "publish": "pnpm publish -r"
   },
   "keywords": [],

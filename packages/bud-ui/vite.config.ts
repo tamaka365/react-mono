@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import typescript from '@rollup/plugin-typescript';
 
 import path from 'path';
 
@@ -9,7 +10,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'components/index.ts'),
     },
     rollupOptions: {
-      external: ['react'],
+      external: ['react', 'classnames/bind'],
       output: [
         {
           format: 'es',
@@ -17,12 +18,26 @@ export default defineConfig({
           preserveModules: true,
           exports: 'named',
         },
-        {
-          format: 'cjs',
-          entryFileNames: '[name].cjs',
-          preserveModules: true,
-          exports: 'named',
-        },
+      ],
+      plugins: [
+        typescript({
+          compilerOptions: {
+            lib: ['ES2020', 'DOM', 'DOM.Iterable'],
+            module: 'ESNext',
+            moduleResolution: 'bundler',
+            noEmit: false,
+            strict: true,
+            jsx: 'preserve',
+            emitDeclarationOnly: true,
+            importHelpers: true,
+          },
+          target: 'es2020',
+          rootDir: 'components',
+          declaration: true,
+          declarationDir: 'dist',
+          exclude: 'node_modules/**',
+          allowSyntheticDefaultImports: true,
+        }),
       ],
     },
     copyPublicDir: false,

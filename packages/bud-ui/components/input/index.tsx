@@ -1,7 +1,9 @@
 import React from 'react';
 
-export const Input: React.FC<{
+const Input: React.FC<{
   children?: React.ReactNode;
 }> = () => {
   return <input type="text" />;
 };
+
+export default Input;

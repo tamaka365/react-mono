@@ -6,9 +6,11 @@
     "bud-docs": "0.0.1",
     "bud-ui": "0.1.1",
     "fe-dev-utils": "0.0.3",
-    "pirate-hooks": "1.0.1"
+    "pirate-hooks": "1.0.1",
+    "playground": "0.0.0"
   },
   "changesets": [
-    "fluffy-squids-breathe"
+    "fluffy-squids-breathe",
+    "fuzzy-cups-impress"
   ]
 }

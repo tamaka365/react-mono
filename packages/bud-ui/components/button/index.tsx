@@ -1,8 +1,20 @@
 import React from 'react';
 
-export const Button: React.FC<{
+import classes from './index.module.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(classes);
+
+const Button: React.FC<{
   children?: React.ReactNode;
   onClick?(): void;
-}> = ({ children, onClick }) => {
-  return <button onClick={onClick}>{children}</button>;
+  shape?: 'rounded' | 'circular' | 'square';
+}> = ({ children, onClick, shape = 'rounded' }) => {
+  return (
+    <button className={cx('button')} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
+
+export default Button;

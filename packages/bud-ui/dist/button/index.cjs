@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const o=require("react"),r=({children:t,onClick:e})=>o.createElement("button",{style:{backgroundColor:"orange"},onClick:e},t);exports.Button=r;
