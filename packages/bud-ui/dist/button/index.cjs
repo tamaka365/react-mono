@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const u=require("react"),n=require("./index.module.scss.cjs"),o=require("classnames/bind"),s=o.bind(n.default),r=({children:e,onClick:t,shape:a="rounded"})=>u.createElement("button",{className:s("button"),onClick:t},e),c=r;exports.default=c;

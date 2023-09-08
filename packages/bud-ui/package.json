@@ -26,6 +26,6 @@
     "sass": ">=1.5"
   },
   "scripts": {
-    "build": "vite build"
+    "build": "cp -rf components/ dist/ && tsc"
   }
 }
