@@ -1,9 +1,11 @@
 import React from 'react';
-import classes from './index.module.scss';
-import classNames from 'classnames/bind';
-const cx = classNames.bind(classes);
-const Button = ({ children, onClick, shape = 'rounded' }) => {
-    return (<button className={cx('button')} onClick={onClick}>
+import { clx } from './../utils';
+import './index.css';
+const Button = ({ children, onClick, className, shape = 'rounded', appearance = 'default', size = 'medium', }) => {
+    // tailwind 标记
+    const btnAppearance = `btn-type-${appearance}`;
+    const minWidth = `min-w-${size}`;
+    return (<button className={clx('btn', shape, btnAppearance, size, minWidth, className)} onClick={onClick}>
       {children}
     </button>);
 };

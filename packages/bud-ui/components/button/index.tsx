@@ -1,17 +1,40 @@
 import React from 'react';
+import { clx } from './../utils';
 
-import classes from './index.module.scss';
-import classNames from 'classnames/bind';
-
-const cx = classNames.bind(classes);
+import './index.css';
 
 const Button: React.FC<{
   children?: React.ReactNode;
   onClick?(): void;
-  shape?: 'rounded' | 'circular' | 'square';
-}> = ({ children, onClick, shape = 'rounded' }) => {
+  className?: string;
+  shape?: 'rounded' | 'circular';
+  appearance?: 'contained' | 'outlined' | 'text';
+  size?: 'small' | 'medium' | 'large';
+}> = ({
+  children,
+  onClick,
+  className,
+  shape = 'rounded',
+  appearance = 'default',
+  size = 'medium',
+}) => {
+  // tailwind 标记
+  const btnAppearance = `btn-type-${appearance}` as
+    | 'btn-type-default'
+    | 'btn-type-contained'
+    | 'btn-type-outlined'
+    | 'btn-type-text';
+
+  const minWidth = `min-w-${size}` as
+    | 'min-w-small'
+    | 'min-w-medium'
+    | 'min-w-large';
+
   return (
-    <button className={cx('button')} onClick={onClick}>
+    <button
+      className={clx('btn', shape, btnAppearance, size, minWidth, className)}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

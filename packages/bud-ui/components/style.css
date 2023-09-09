@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind utilities;
+
+@layer utilities {
+  /* size */
+  .small {
+    @apply py-0.75 px-2 text-xs;
+  }
+  .medium {
+    @apply py-1.25 px-3 text-sm;
+  }
+  .large {
+    @apply py-2 px-4 text-base;
+  }
+
+  /* shape */
+  .circular {
+    @apply rounded-circular;
+  }
+}

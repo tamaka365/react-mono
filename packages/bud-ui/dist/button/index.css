@@ -1,0 +1,36 @@
+.btn {
+  border-width: 1px;
+  border-style: solid
+}
+
+.btn.medium,
+  .btn.large {
+  font-weight: 600
+}
+
+.btn-type-contained,
+  .btn-type-text {
+  border-color: transparent
+}
+
+.btn-type-contained {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 108 189 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+
+.btn-type-default,
+  .btn-type-outlined {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 209 209 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(36 36 36 / var(--tw-text-opacity))
+}
+
+.btn-type-default {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(66 66 66 / var(--tw-text-opacity))
+}

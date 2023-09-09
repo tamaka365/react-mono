@@ -17,15 +17,19 @@
     "@types/node": "^20.5.9",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "tailwindcss": "^3.3.3",
     "tslib": "^2.6.2",
     "vite": "^4.4.5"
   },
   "peerDependencies": {
-    "react": ">=18",
     "classnames": ">=2.0",
+    "react": ">=18",
     "sass": ">=1.5"
   },
   "scripts": {
-    "build": "cp -rf components/ dist/ && tsc"
+    "build": "cp -rf components/ dist/ && tsc && npx tailwindcss -i ./dist/*.css  -o ./dist/*.css && npx tailwindcss -i ./dist/**/*.css  -o ./dist/**/*.css"
+  },
+  "dependencies": {
+    "@fluentui/react-icons": "^2.0.212"
   }
 }

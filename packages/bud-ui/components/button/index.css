@@ -1,0 +1,28 @@
+@tailwind components;
+
+@layer components {
+  .btn {
+    @apply border border-solid;
+  }
+  .btn.medium,
+  .btn.large {
+    @apply font-semibold;
+  }
+
+  .btn-type-contained,
+  .btn-type-text {
+    @apply border-transparent;
+  }
+
+  .btn-type-contained {
+    @apply bg-primary text-white;
+  }
+
+  .btn-type-default,
+  .btn-type-outlined {
+    @apply border-gray-300 text-gray-800;
+  }
+  .btn-type-default {
+    @apply bg-white text-gray-700;
+  }
+}
